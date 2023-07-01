@@ -26,7 +26,7 @@ const Tweeter = function () {
 
 
     const getPosts = function () {
-        return Tweets
+        return [...Tweets]
     }
 
     const addPost = function (postText) {
