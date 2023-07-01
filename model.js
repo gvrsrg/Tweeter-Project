@@ -45,7 +45,7 @@ const Tweeter = function () {
     }
 
     const addComment = function (commentText, postId) {
-        post = Tweets.find(item => item.id === postId)
+        let post = Tweets.find(item => item.id === postId)
 
         commentIdCounter++;
 
@@ -59,7 +59,7 @@ const Tweeter = function () {
     }
 
     const removeComment  = function (postId, commentId) {
-        post = Tweets.find(item => item.id === postId);
+        let post = Tweets.find(item => item.id === postId);
         post.comments = post.comments.filter(item => item.id !== commentId);
 
     }

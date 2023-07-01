@@ -23,8 +23,19 @@ const deletePost = function(element) {
     $(".delete-post").on("click", deletePost); 
 }
 
+const deleteComment = function(element) {
+    id = element.currentTarget.id;
+    ids = id.replace("comment-delete-","").split("-")
+    tweeterModel.removeComment(ids[0],ids[1]);
+    viewModel.renderPosts(tweeterModel.getPosts())
+    $(".delete-post").on("click", deletePost); 
+    $(".delete-comment").on("click", deleteComment); 
+}
 
-
+tweeterModel.addPost("This is my own post!")
+tweeterModel.addComment("Damn straight it is!", "p3")
+tweeterModel.addComment("Second the best!", "p2")
 
 viewModel.renderPosts(tweeterModel.getPosts());
 $(".delete-post").on("click", deletePost); 
+$(".delete-comment").on("click", deleteComment); 

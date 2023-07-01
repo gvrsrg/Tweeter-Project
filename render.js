@@ -26,8 +26,13 @@ const tweeterView = function () {
 
         for (let comment of post.comments) {
             postDiv.append(`<div class="comments" id=comment-${comment.id}>${comment.text}</div>`)
-        }
+            postDiv.append(`<div class="delete-comment" id=comment-delete-${post.id}-${comment.id}>X</div>`)        }
 
+    }
+
+    const clearComment = function (postId, commentId) {
+        commentDiv = $(`#comment-${commentId}`)
+        commentDiv.remove()
     }
 
     const clearInput = function () {
@@ -40,7 +45,8 @@ const tweeterView = function () {
     return {
         renderPosts,
         clearInput,
-        clearPost
+        clearPost,
+        clearComment
 
     }
 
