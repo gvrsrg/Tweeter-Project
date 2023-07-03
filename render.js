@@ -23,15 +23,21 @@ const tweeterView = function () {
     
     const renderComments = function (post) {
         postDiv = $(`#post-${post.id}`)
+        postDiv.append(`<div class="comments" id="comments-${post.id}"></div>`)
+        
+        commentDiv = $(`#comments-${post.id}`)
+
 
         for (let comment of post.comments) {
-            postDiv.append(`<div class="comments" id=comment-${comment.id}>${comment.text}</div>`)
-            postDiv.append(`<div class="delete-comment" id=comment-delete-${post.id}-${comment.id}>X</div>`)        }
+            commentDiv.append(`<div class="comment-text" id=comment-${comment.id}>${comment.text}</div>`)
+            commentDiv.append(`<div class="delete-comment" id=comment-delete-${post.id}-${comment.id}>X</div>`)
+                }
+        
 
     }
 
     const clearComment = function (postId, commentId) {
-        commentDiv = $(`#comment-${commentId}`)
+        commentDiv = $(`#commens-${commentId}`)
         commentDiv.remove()
     }
 

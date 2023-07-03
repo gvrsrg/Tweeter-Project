@@ -68,6 +68,12 @@ body{
     margin: 10px;
 }
 
+.comment-text{
+    display:contents;
+    margin-left: 0;
+    margin: 0;
+}
+
 .delete-post{
     cursor: pointer;
     color: #ecf0f1;
@@ -79,6 +85,7 @@ body{
 }
 
 .delete-comment{
+    display:contents;
     cursor: pointer;
     color: #e74c3c;
 }
