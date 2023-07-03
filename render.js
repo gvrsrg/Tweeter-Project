@@ -29,8 +29,8 @@ const tweeterView = function () {
 
 
         for (let comment of post.comments) {
-            commentDiv.append(`<div class="comment-text" id=comment-${comment.id}>${comment.text}</div>`)
-            commentDiv.append(`<div class="delete-comment" id=comment-delete-${post.id}-${comment.id}>X</div>`)
+            commentDiv.append(`<div class="comment-text" id=comment-${comment.id}>${comment.text}<span class="delete-comment">X</span></div>`)
+            //commentDiv.append(`<div class="delete-comment" id=comment-delete-${comment.id}>X</div>`)
                 }
         
 

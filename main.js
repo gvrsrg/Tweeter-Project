@@ -24,9 +24,10 @@ const deletePost = function(element) {
 }
 
 const deleteComment = function(element) {
-    id = element.currentTarget.id;
-    ids = id.replace("comment-delete-","").split("-")
-    tweeterModel.removeComment(ids[0],ids[1]);
+    let postId = $(this).closest(".post")[0].id.replace("post-","")
+    let commentId = $(this).closest(".comment-text")[0].id.replace("comment-","")
+    //ids = id.replace("comment-delete-","").split("-")
+    tweeterModel.removeComment(postId,commentId);
     viewModel.renderPosts(tweeterModel.getPosts())
     $(".delete-post").on("click", deletePost); 
     $(".delete-comment").on("click", deleteComment); 

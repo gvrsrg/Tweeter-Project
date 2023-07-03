@@ -69,7 +69,7 @@ body{
 }
 
 .comment-text{
-    display:contents;
+    
     margin-left: 0;
     margin: 0;
 }
@@ -82,10 +82,11 @@ body{
     padding: 5px;
     border-radius: 3px;
     font-size: 0.8em;
+    float: right;
 }
 
 .delete-comment{
-    display:contents;
+    float: right;
     cursor: pointer;
     color: #e74c3c;
 }
