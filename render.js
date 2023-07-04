@@ -8,10 +8,11 @@ const tweeterView = function () {
         for (let post of posts) {
             postsDiv.append(`<div class="post" id=post-${post.id}></div>`)
             postDiv = $(`#post-${post.id}`)
-            postDiv.append(`<div class="post-text" id=post-text-${post.id}>${post.text}</div>`)
-            postDiv.append(`<div class="delete-post" id=post-delete-${post.id}>DELETE POST</div>`)
-
+            postDiv.append(`<div class="post-text" id=post-text-${post.id}>${post.text}<span class="delete-post">DELETE POST</span></div>`)
+            //postDiv.append(`<div class="delete-post" id=post-delete-${post.id}>DELETE POST</div>`)
+    
             renderComments(post)
+            postDiv.append(`<div class="new-comment"><input class="new-comment-text" placeholder="Enter your comment"><span class="add-comment">ADD COMMENT</span></div>`)
         }
 
     }

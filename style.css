@@ -90,3 +90,13 @@ body{
     cursor: pointer;
     color: #e74c3c;
 }
+
+.add-comment{
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 0.8em;
+    float:initial;
+    cursor: pointer;
+    color: #ecf0f1;
+    background-color: green;
+}
